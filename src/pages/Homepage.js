@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 
 function Homepage() {
-	const [img, setImg] = useState('/assets/images/img-2.jpg');
+	const img = '/assets/images/img-2.jpg';
 
 	return (
 		<div>

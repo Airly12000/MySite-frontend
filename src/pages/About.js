@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
 
 function About() {
-	const [img, setImg] = useState('/assets/images/img-3.jpeg');
-	const [img2, setImg2] = useState('/assets/images/img-4.jpeg');
+	const img = '/assets/images/img-3.jpeg';
+	const img2 = '/assets/images/img-4.jpeg';
 
 	return (
 		<div>
