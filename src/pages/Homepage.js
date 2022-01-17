@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 
 function Homepage() {
 	const img = '/assets/images/img-2.jpg';
+
+	const [width, setWidth] = useState(window.innerWidth);
+
+	const handleSize = (event) => {
+		setWidth(window.innerWidth);
+	};
+
+	window.addEventListener('resize', handleSize);
 
 	return (
 		<div>
@@ -11,6 +19,7 @@ function Homepage() {
 				<div className='name'>
 					<h1>Agbesi-Ntibrey Francis Jnr</h1>
 					{/* <h2>Fullstack Web Developer based in Ghana</h2> */}
+					<h2>{width}</h2>
 				</div>
 				<div className='home_grid'>
 					<div className='bio'>

@@ -9,6 +9,9 @@ function Header() {
 				<a href='/portfolio'>Portfolio</a>
 				<a href='/contact'>Contact</a>
 			</div>
+			<div className='links_width'>
+				<i className='fa fa-book'></i>Open
+			</div>
 			<div className='logo'>
 				<a href='/'>
 					<i className='fa fa-grav'></i>

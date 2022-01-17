@@ -498,3 +498,29 @@ p {
 	grid-template-columns: 15px auto;
 	column-gap: 1rem;
 }
+
+.links_width {
+	display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+	.links {
+		font-size: 13px;
+		column-gap: 1rem;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.links {
+		display: none;
+	}
+
+	header {
+		grid-template-columns: 20% 20% 30%;
+	}
+
+	.links_width {
+		display: block;
+		color: black;
+	}
+}
