@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Header() {
+	const [display, setDisplay] = useState('none');
+
+	const toggle = () => {
+		if (display === 'flex') {
+			setDisplay('none');
+		} else {
+			setDisplay('flex');
+		}
+	};
+
 	return (
 		<header>
 			<div className='links'>
@@ -9,8 +19,15 @@ function Header() {
 				<a href='/portfolio'>Portfolio</a>
 				<a href='/contact'>Contact</a>
 			</div>
-			<div className='links_width'>
+			<div className='toggle' onClick={toggle}>
 				<i className='fa fa-bars'></i>
+			</div>
+			<div className='links_width' style={{ display: display }}>
+				<a href='/'>Home</a>
+				<a href='/about'>About</a>
+				<a href='/projects'>Projects</a>
+				<a href='/portfolio'>Portfolio</a>
+				<a href='/contact'>Contact</a>
 			</div>
 			<div className='logo'>
 				<a href='/'>

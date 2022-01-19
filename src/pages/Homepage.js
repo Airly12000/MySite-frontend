@@ -4,6 +4,8 @@ import Header from '../components/Header';
 function Homepage() {
 	const img = '/assets/images/img-2.jpg';
 
+	console.log(window.innerWidth);
+
 	return (
 		<div>
 			<Header />
@@ -24,18 +26,18 @@ function Homepage() {
 						</div>
 						<div>
 							<h4>Contact</h4>
-							<p>
+							<div>
 								<div>Kasoa, Central Region</div>
 								<div>littelfrancis28@gmail.com</div>
 								<div>0246456675</div>
-							</p>
+							</div>
 						</div>
 						<div>
 							<h4>Services</h4>
-							<p>
+							<div>
 								<div>Full Stack Web Development</div>
 								<div>Mobile Application Development</div>
-							</p>
+							</div>
 						</div>
 					</div>
 					<div className='image'>
@@ -70,18 +72,20 @@ function Homepage() {
 							</div>
 							<div>
 								<h4>Contact</h4>
-								<p>
+								<div>
 									<div>Kasoa, Central Region</div>
-									<div>littelfrancis28@gmail.com</div>
+									<div>
+										<label htmlFor='Mail'>Gmail:</label> littelfrancis28
+									</div>
 									<div>0246456675</div>
-								</p>
+								</div>
 							</div>
 							<div>
 								<h4>Services</h4>
-								<p>
+								<div>
 									<div>Full Stack Web Development</div>
 									<div>Mobile Application Development</div>
-								</p>
+								</div>
 							</div>
 						</div>
 						<div className='figures'>
