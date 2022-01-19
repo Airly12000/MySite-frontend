@@ -10,7 +10,7 @@ function About() {
 			<Header />
 			<div className='main'>
 				<h1 className='title'>About</h1>
-				<div className='about_grid'>
+				<div className='about'>
 					<div className='about_img'>
 						<div className='background'></div>
 						<img src={img} alt='myImage' className='img1' />
@@ -18,7 +18,7 @@ function About() {
 					</div>
 					<div className='info'>
 						<div>
-							<h3>Bio</h3>
+							<h3>Biography</h3>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
 								numquam, in delectus recusandae fuga officia repellendus illo

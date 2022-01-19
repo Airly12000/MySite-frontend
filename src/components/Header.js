@@ -10,7 +10,7 @@ function Header() {
 				<a href='/contact'>Contact</a>
 			</div>
 			<div className='links_width'>
-				<i className='fa fa-book'></i>Open
+				<i className='fa fa-bars'></i>
 			</div>
 			<div className='logo'>
 				<a href='/'>

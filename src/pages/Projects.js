@@ -9,7 +9,7 @@ function Projects() {
 			<Header />
 			<div className='main'>
 				<h1 className='title'>Projects</h1>
-				<div className='projects_grid'>
+				<div className='projects'>
 					<div className='project'>
 						<img src={img} alt='pro' />
 						<div>
