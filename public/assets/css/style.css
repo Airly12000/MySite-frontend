@@ -542,16 +542,20 @@ p {
 }
 
 @media screen and (orientation: landscape) {
+	header {
+		height: 12vw;
+	}
+
 	.links_width {
-		left: 12vw;
-		height: 55vw;
+		height: fit-content;
 		width: 50vh;
-		top: 0;
+		top: 12vw;
+		left: 0;
+		font-size: 1rem;
 	}
 
 	.project {
-		height: 100%;
-		width: 70vh;
+		height: 70vw;
 	}
 }
 
