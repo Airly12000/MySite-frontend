@@ -385,7 +385,8 @@ p {
 .project {
 	display: flex;
 	width: 100%;
-	height: 70vh;
+	height: fit-content;
+	padding-bottom: 0.5rem;
 	margin-bottom: 1.5rem;
 	flex-direction: column;
 	/* background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959); */
@@ -530,33 +531,16 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	padding-left: 2rem;
+	padding-bottom: 0.5rem;
 	position: fixed;
 	row-gap: 2rem;
 	z-index: 1;
-	top: 12vh;
+	top: 11vh;
 	left: 0;
 	background-color: white;
 	height: 55vh;
 	width: 50vw;
 	letter-spacing: 2px;
-}
-
-@media screen and (orientation: landscape) {
-	header {
-		height: 12vw;
-	}
-
-	.links_width {
-		height: fit-content;
-		width: 50vh;
-		top: 12vw;
-		left: 0;
-		font-size: 1rem;
-	}
-
-	.project {
-		height: 70vw;
-	}
 }
 
 .links_width a {
@@ -573,14 +557,41 @@ p {
 	color: black;
 	text-align: center;
 	font-size: 25px;
+	transition: font-size 200ms;
 }
 
-.toggle i {
+.toggle:hover {
+	font-size: 28px;
+}
+
+/* .toggle i {
 	transform: rotate(0deg);
 	transition: transform 200ms;
+} */
+
+@media only screen and (max-width: 1366px) {
+	@media screen and (orientation: landscape) {
+		header {
+			height: 5vw;
+		}
+
+		.main {
+			margin-top: 3vw;
+		}
+	}
 }
 
 @media only screen and (max-width: 1150px) {
+	@media screen and (orientation: landscape) {
+		header {
+			height: 8vw;
+		}
+
+		.main {
+			margin-top: 6vw;
+		}
+	}
+
 	.about {
 		display: flex;
 		flex-direction: column;
@@ -617,6 +628,26 @@ p {
 		grid-template-columns: 20% 40% 30%;
 	}
 
+	@media screen and (orientation: landscape) {
+		header {
+			height: 10vw;
+		}
+
+		.main {
+			margin-top: 8vw;
+		}
+
+		.links_width {
+			height: fit-content;
+			width: fit-content;
+			padding-right: 6rem;
+			top: 10vw;
+			left: 0;
+			font-size: 1rem;
+			row-gap: 0.8rem;
+		}
+	}
+
 	.links {
 		display: none;
 	}
@@ -628,8 +659,6 @@ p {
 	.title {
 		margin-top: 2rem;
 	}
-
-	/* Homepage */
 
 	.name {
 		width: 40%;
@@ -712,10 +741,7 @@ p {
 	}
 }
 
-/* Mobile View */
-
 @media only screen and (max-width: 480px) {
-	/* Header */
 	header {
 		grid-template-columns: 20% 70%;
 	}
@@ -724,9 +750,9 @@ p {
 		width: 80%;
 	}
 
-	.toggle:hover i {
+	/* .toggle:hover i {
 		transition: rotate(-90deg);
-	}
+	} */
 
 	.socials {
 		font-size: 14px;

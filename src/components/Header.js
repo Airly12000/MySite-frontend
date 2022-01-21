@@ -11,6 +11,12 @@ function Header() {
 		}
 	};
 
+	const handleClick = () => {
+		setDisplay('none');
+	};
+
+	window.addEventListener('resize', handleClick);
+
 	return (
 		<header>
 			<div className='links'>
