@@ -1,7 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs, { init } from 'emailjs-com';
 import Header from '../components/Header';
 
 function Contact() {
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+	const [submit, setSubmit] = useState('none');
+	const [errorMessage, setErrorMessage] = useState(null);
+
+	const handleChange = (event) => {
+		const name = event.target.name;
+		if (name === 'name') {
+			setName(event.target.value);
+		} else if (name === 'email') {
+			setEmail(event.target.value);
+		} else {
+			setMessage(event.target.value);
+		}
+	};
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		setSubmit('inline-block');
+
+		if (name && email && message) {
+			emailjs.send(
+				'default_service',
+				'airly12001',
+				{
+					from_email: email,
+					from_name: name,
+					message: message,
+				},
+				init('user_ojoUDIkOgkrhwfYgQ1nUE')
+			);
+
+			setErrorMessage(false);
+		} else {
+			setErrorMessage(true);
+		}
+	};
+
 	return (
 		<div>
 			<Header />
@@ -23,15 +64,40 @@ function Contact() {
 						</p>
 						<div className='c_details'>
 							<form className='form'>
-								<input type='text' name='' id='' placeholder='Your name' />
-								<input type='email' name='' id='' placeholder='Your email' />
+								<input
+									type='text'
+									name='name'
+									id=''
+									value={name}
+									onChange={handleChange}
+									placeholder='Your name'
+								/>
+								<input
+									type='email'
+									name='email'
+									id=''
+									value={email}
+									onChange={handleChange}
+									placeholder='Your email'
+								/>
 								<textarea
-									name=''
+									name='message'
+									value={message}
+									onChange={handleChange}
 									id=''
 									cols='30'
 									rows='10'
 									placeholder='Message'></textarea>
-								<button type='submit'>Submit</button>
+								<button type='submit' onClick={handleSubmit}>
+									Submit
+								</button>
+								<div style={{ display: submit }}>
+									{errorMessage ? (
+										<p style={{ color: 'red' }}>Fill in all details</p>
+									) : (
+										<p style={{ color: 'red' }}>Message Submitted</p>
+									)}
+								</div>
 							</form>
 							<div className='c_info'>
 								<p>

@@ -525,7 +525,7 @@ p {
 
 .links_width {
 	display: none;
-	font-size: 25px;
+	font-size: 1.5rem;
 	color: black;
 	flex-direction: column;
 	justify-content: center;
@@ -536,9 +536,23 @@ p {
 	top: 12vh;
 	left: 0;
 	background-color: white;
-	height: 50vh;
+	height: 55vh;
 	width: 50vw;
 	letter-spacing: 2px;
+}
+
+@media screen and (orientation: landscape) {
+	.links_width {
+		left: 12vw;
+		height: 55vw;
+		width: 50vh;
+		top: 0;
+	}
+
+	.project {
+		height: 100%;
+		width: 70vh;
+	}
 }
 
 .links_width a {
@@ -589,7 +603,7 @@ p {
 	}
 
 	.project div p {
-		font-size: 15px;
+		font-size: 0.8rem;
 	}
 }
 
@@ -702,6 +716,10 @@ p {
 		grid-template-columns: 20% 70%;
 	}
 
+	.name {
+		width: 80%;
+	}
+
 	.toggle:hover i {
 		transition: rotate(-90deg);
 	}
@@ -727,7 +745,7 @@ p {
 	}
 
 	.mobile_home .figures {
-		margin-right: -1rem;
+		margin-right: -0.35rem;
 	}
 
 	.about {

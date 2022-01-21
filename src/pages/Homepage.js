@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 
 function Homepage() {
-	const img = '/assets/images/img-2.jpg';
+	const img = '/assets/images/img-3.jpeg';
 
 	console.log(window.innerWidth);
 

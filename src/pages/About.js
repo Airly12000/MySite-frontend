@@ -32,11 +32,11 @@ function About() {
 						</div>
 						<div className='other'>
 							<label htmlFor='DOB'>DOB : </label>
-							28th January, 2000
+							20th May, 1961
 						</div>
 						<div className='other'>
 							<label htmlFor='Status'>Marital Status : </label>
-							Single
+							Married
 						</div>
 						<div className='other'>
 							<label htmlFor='Address'>Address : </label>
